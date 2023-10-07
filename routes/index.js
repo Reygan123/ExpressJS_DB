@@ -31,7 +31,7 @@ router.get("/category", async (req, res) => {
 router.get("/film/category/:id", async (req, res) => {
   const { id } = req.params;
 
-  const Category_Film = await film_category.findOne({
+  const Category_Film = await film_category.findAll({
     where: {
       category_id: +id,
     },
